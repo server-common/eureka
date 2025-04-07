@@ -70,5 +70,6 @@ jib {
             "-Dspring.security.user.name=" + System.getenv("EUREKA_USER_NAME"),
             "-Dspring.security.user.password=" + System.getenv("EUREKA_USER_PWD"),
         )
+        ports = listOf("8761")
     }
 }
