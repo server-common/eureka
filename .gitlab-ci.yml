@@ -44,4 +44,3 @@ deploy:
     - docker logout
   tags:
     - shared-mac
-  interruptible: true
