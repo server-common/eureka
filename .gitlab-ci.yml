@@ -36,8 +36,7 @@ deploy:
     - docker login $CI_REGISTRY -u $TOKEN_USER --password $TOKEN_PWD
   script:
     - docker pull $DOCKER_LATEST_IMAGE_NAME
-    - docker stop $CI_PROJECT_NAME;echo $?
-    - docker rm -f $CI_PROJECT_NAME;echo $?
+    - docker stop $CI_PROJECT_NAME || true && docker rm -f $CI_PROJECT_NAME || true
     - docker run -d -p 8761:8761 --name $CI_PROJECT_NAME $DOCKER_LATEST_IMAGE_NAME
     - docker system prune -f
   after_script:
