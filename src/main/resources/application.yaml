@@ -7,6 +7,8 @@ spring:
     name: eureka
 
 eureka:
+  server:
+    eviction-interval-timer-in-ms: 30000
   client:
     register-with-eureka: false
     fetch-registry: false
