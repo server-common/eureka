@@ -57,6 +57,12 @@ tasks.withType<Test> {
 jib {
     from {
         image = "amazoncorretto:17-alpine-jdk"
+        platforms {
+            platform {
+                architecture = "arm64"
+                os = "linux"
+            }
+        }
     }
     to {
         image = System.getenv("JIB_IMAGE")
