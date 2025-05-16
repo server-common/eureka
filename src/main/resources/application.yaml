@@ -2,7 +2,7 @@ spring:
   application:
     name: eureka
   config:
-    import: optional:configserver:https://cloud.seoeungi.work
+    import: optional:configserver:http://host.docker.internal:8760
   cloud:
     config:
       fail-fast: true
