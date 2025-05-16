@@ -24,8 +24,8 @@ build:
     - echo "jib 실행"
     - ./gradlew jib --no-daemon
     - echo "jib 완료"
-#  tags:
-#    - shared-ubuntu
+  tags:
+    - shared-ubuntu
 
 deploy:
   stage: deploy
