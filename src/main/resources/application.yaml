@@ -1,8 +1,13 @@
+server:
+  port: 8761
+
 spring:
   application:
     name: eureka
-  config:
-    import: optional:configserver:https://config.seoeungi.work
-  cloud:
-    config:
-      fail-fast: true
+
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 30000
+  client:
+    register-with-eureka: false
+    fetch-registry: false
